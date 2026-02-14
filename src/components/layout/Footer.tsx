@@ -33,7 +33,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary-foreground" />
+                {/* <Heart className="w-5 h-5 text-primary-foreground" /> */}
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold leading-tight">Unity Welcome</span>
@@ -144,6 +144,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
