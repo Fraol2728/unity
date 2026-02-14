@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Scroll, Heart, Users, Handshake, Smile, Scale, Building2, Goal, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto from "@/assets/team-photo.jpg";
 import teamPhoto0 from "@/assets/1.jpg";
 import teamPhoto1 from "@/assets/2.jpg";
 import teamPhoto2 from "@/assets/3.jpg";
@@ -161,11 +161,11 @@ const About = () => {
             </div>
 
             <div className="relative">
-              {/* <img
+              { <img
                 src={teamPhoto}
                 alt="Unity Settlement team members working together"
                 className="rounded-2xl shadow-xl w-full"
-              /> */}
+              /> }
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl shadow-lg p-6">
                 <div className="text-4xl font-display font-bold text-primary">5,000+</div>
                 <div className="text-sm text-muted-foreground">Lives Impacted Annually</div>
@@ -277,4 +277,5 @@ const About = () => {
 };
 
 export default About;
+
 
