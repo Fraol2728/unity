@@ -5,19 +5,19 @@ const testimonials = [
     quote: "Unity Settlement helped my family find not just a home, but a community. After fleeing our country, we thought we had lost everything. They showed us that hope and kindness still exist.",
     name: "Amara K.",
     role: "Refugee from Syria",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
+    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
   },
   {
     quote: "The language training program changed my life. Within a year, I went from knowing no English to landing my first job. The staff treated me like family every step of the way.",
     name: "Miguel R.",
     role: "Immigrant from Venezuela",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
   },
   {
     quote: "When I needed legal help with my documentation, they were there. When I needed someone to talk to, they listened. This organization truly cares about the whole person.",
     name: "Fatima A.",
     role: "Refugee from Afghanistan",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
+    // image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
   },
 ];
 
@@ -70,3 +70,4 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
