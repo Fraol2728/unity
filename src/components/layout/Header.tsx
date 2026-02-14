@@ -25,8 +25,8 @@ export function Header() {
               <Heart className="w-5 h-5 text-primary-foreground" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-lg font-bold text-primary leading-tight">Unity Settlement</span>
-              <span className="text-xs text-muted-foreground leading-tight">Welcome Agency</span>
+              <span className="font-display text-lg font-bold text-primary leading-tight">Unity Welcome</span>
+              <span className="text-xs text-muted-foreground leading-tight">Settlement Agency</span>
             </div>
           </Link>
 
@@ -98,3 +98,4 @@ export function Header() {
     </header>
   );
 }
+
