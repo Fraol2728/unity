@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const navigation = {
   main: [
@@ -36,8 +36,8 @@ export function Footer() {
                 <Heart className="w-5 h-5 text-primary-foreground" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-lg font-bold leading-tight">Unity Settlement</span>
-                <span className="text-xs text-primary-foreground/70 leading-tight">Welcome Agency</span>
+                <span className="font-display text-lg font-bold leading-tight">Unity Welcome</span>
+                <span className="text-xs text-primary-foreground/70 leading-tight">Settlement Agency</span>
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -144,6 +144,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
