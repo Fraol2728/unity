@@ -121,11 +121,9 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © {new Date().getFullYear()} Unity Settlement Welcome Agency. All rights reserved.
+              © {new Date().getFullYear()} Unity Settlement Welcome Agency. All rights reserved.  Code Artist <a href="devfraol.com">DevFraol</a>
             </p>
-            <p>
-              Code Artist <a href="devfraol.com">DevFraol<a/>
-            </p>
+         
             <div className="flex gap-6">
               <Link to="/privacy" className="text-sm text-primary-foreground/60 hover:text-primary-foreground">
                 Privacy Policy
@@ -140,4 +138,5 @@ export function Footer() {
     </footer>
   );
 }
+
 
