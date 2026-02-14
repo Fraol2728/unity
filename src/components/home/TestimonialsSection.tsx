@@ -49,11 +49,11 @@ export function TestimonialsSection() {
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center gap-4">
-                <img
+                {/* <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
-                />
+                /> */}
                 <div>
                   <p className="font-semibold text-primary-foreground">
                     {testimonial.name}
@@ -70,4 +70,5 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
 
