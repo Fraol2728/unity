@@ -39,7 +39,7 @@ const boardMembers = [
     image: teamPhoto2,
   },
   {
-    name: "Daraje Leiyu",
+    name: "Michael Benti",
     // role: "Treasurer",
     // bio: "David's financial expertise in the nonprofit sector ensures our resources are managed with integrity and transparency.",
     image: teamPhoto3,
@@ -277,3 +277,4 @@ const About = () => {
 };
 
 export default About;
+
