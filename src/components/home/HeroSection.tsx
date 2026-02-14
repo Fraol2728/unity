@@ -35,12 +35,7 @@ export function HeroSection() {
             guidance, and community integration programs.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button variant="warm" size="xl" asChild>
-              <Link to="/contact">
-                Donate Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+           
             <Button variant="hero-outline" size="xl" asChild>
               <Link to="/about">Learn About Us</Link>
             </Button>
@@ -56,3 +51,4 @@ export function HeroSection() {
     </section>
   );
 }
+
