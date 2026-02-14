@@ -104,13 +104,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0 text-secondary" />
-                <a href="tel:+14165551234" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">
+                <a href="tel:+15197224339" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">
                   +1 (519)-722-4339
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0 text-secondary" />
-                <a href="mailto:hello@unitysettlement.org" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">
+                <a href="mailto:Dleiyu@yahoo.com" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">
                   Dleiyu@yahoo.com
                 </a>
               </li>
@@ -144,6 +144,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
