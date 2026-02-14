@@ -123,6 +123,9 @@ export function Footer() {
             <p className="text-sm text-primary-foreground/60">
               © {new Date().getFullYear()} Unity Settlement Welcome Agency. All rights reserved.
             </p>
+            <p>
+              Code Artist <a href="devfraol.com">DevFraol<a/>
+            </p>
             <div className="flex gap-6">
               <Link to="/privacy" className="text-sm text-primary-foreground/60 hover:text-primary-foreground">
                 Privacy Policy
@@ -137,3 +140,4 @@ export function Footer() {
     </footer>
   );
 }
+
