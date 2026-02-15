@@ -95,12 +95,7 @@ export function Footer() {
           <div>
             <h3 className="font-display text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary" />
-                <span className="text-sm text-primary-foreground/80">
-                  
-                </span>
-              </li>
+              
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0 text-secondary" />
                 <a href="tel:+15197224339" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">
@@ -143,6 +138,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
