@@ -98,8 +98,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary" />
                 <span className="text-sm text-primary-foreground/80">
-                  123 Welcome Street, Community Center<br />
-                  Toronto, ON M5V 2K7
+                  
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -121,7 +120,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © {new Date().getFullYear()} Unity Settlement Welcome Agency. All rights reserved.
+              © {new Date().getFullYear()} Unity Welcome Settelemnt. All rights reserved.
             </p>
            <p>
               Code Artist{" "}
@@ -144,6 +143,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
