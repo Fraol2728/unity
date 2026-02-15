@@ -23,16 +23,13 @@ export function HeroSection() {
             Building an Inclusive, Compassionate Community
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-            Where Everyone is Welcomed, Valued, and Empowered
+           Helping Newcomers & Multicultural Communities Thrive in Canada
           </h1>
           <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-4">
-            <strong className="text-secondary">Our Vision:</strong> A world where every newcomer 
-            finds belonging, support, and opportunity to thrive.
+            We walk alongside refugees, immigrants, and diverse communities — offering the support, resources, and connections you need to feel at home and build a brighter future
           </p>
           <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-8">
-            <strong className="text-secondary">Our Mission:</strong> To empower refugees, immigrants, 
-            and vulnerable communities through comprehensive settlement services, education, employment 
-            guidance, and community integration programs.
+            <strong className="text-secondary">Our vision:</strong>  is a united and inclusive Canada where diverse communities thrive together with dignity and respect
           </p>
           <div className="flex flex-wrap gap-4">
            
@@ -51,4 +48,5 @@ export function HeroSection() {
     </section>
   );
 }
+
 
