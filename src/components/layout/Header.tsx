@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png"; // keep import at the top
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -22,12 +22,20 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Heart className="w-5 h-5 text-primary-foreground" />
-            </div>
+            {/* Logo Image */}
+            <img
+              src={logo}
+              alt="UWS Settle Logo"
+              className="w-10 h-10 object-contain rounded-full"
+            />
+
             <div className="flex flex-col">
-              <span className="font-display text-lg font-bold text-primary leading-tight">Unity Welcome</span>
-              <span className="text-xs text-muted-foreground leading-tight">Settlement Agency</span>
+              <span className="font-display text-lg font-bold text-primary leading-tight">
+                Unity Welcome
+              </span>
+              <span className="text-xs text-muted-foreground leading-tight">
+                Settlement Agency
+              </span>
             </div>
           </Link>
 
@@ -99,5 +107,3 @@ export function Header() {
     </header>
   );
 }
-
-
