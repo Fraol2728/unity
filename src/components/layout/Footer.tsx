@@ -117,7 +117,7 @@ export function Footer() {
             <p className="text-sm text-primary-foreground/60">
               © {new Date().getFullYear()} Unity Welcome Settelemnt. All rights reserved.
             </p>
-           <p>
+           <p className="text-sm text-primary-foreground/60">
               Code Artist{" "}
             <a href="https://devfraol.com" target="_blank" rel="noopener noreferrer">
               DevFraol
@@ -138,6 +138,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 
