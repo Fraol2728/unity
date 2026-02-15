@@ -20,7 +20,7 @@ export function HeroSection() {
       <div className="relative container-custom section-padding">
         <div className="max-w-3xl animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-6">
-            Building an Inclusive, Compassionate Community
+           Unity Welcome Settlement
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
            Helping Newcomers & Multicultural Communities Thrive in Canada
@@ -48,5 +48,6 @@ export function HeroSection() {
     </section>
   );
 }
+
 
 
