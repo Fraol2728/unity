@@ -25,9 +25,9 @@ export function HeroSection() {
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
            Helping Newcomers & Multicultural Communities Thrive in Canada
           </h1>
-          <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-4">
+          {/* <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-4">
             We walk alongside refugees, immigrants, and diverse communities — offering the support, resources, and connections you need to feel at home and build a brighter future
-          </p>
+          </p> */}
           <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-8">
             <strong className="text-secondary">Our vision:</strong>  is a united and inclusive Canada where diverse communities thrive together with dignity and respect
           </p>
@@ -48,6 +48,7 @@ export function HeroSection() {
     </section>
   );
 }
+
 
 
 
