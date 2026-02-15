@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    details: ["123 Welcome Street, Community Center", "Toronto, ON M5V 2K7"],
-  },
+  // {
+  //   icon: MapPin,
+  //   title: "Visit Us",
+  //   details: ["123 Welcome Street, Community Center", "Toronto, ON M5V 2K7"],
+  // },
   {
     icon: Phone,
     title: "Call Us",
@@ -20,11 +20,11 @@ const contactInfo = [
     title: "Email Us",
     details: ["Dleiyu@yahoo.com"],
   },
-  {
-    icon: Clock,
-    title: "Office Hours",
-    details: ["Monday - Friday: 9am - 6pm", "Saturday: 10am - 2pm"],
-  },
+  // {
+  //   icon: Clock,
+  //   title: "Office Hours",
+  //   details: ["Monday - Friday: 9am - 6pm", "Saturday: 10am - 2pm"],
+  // },
 ];
 
 const socialLinks = [
@@ -277,3 +277,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
