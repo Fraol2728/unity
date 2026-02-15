@@ -106,10 +106,7 @@ const About = () => {
                 <div>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Vision</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    A world where every newcomer—regardless of their origin—finds a welcoming community, 
-                    access to essential services, and the opportunity to build a safe, dignified, and 
-                    fulfilling life. We envision inclusive societies that embrace diversity as their 
-                    greatest strength and welcome newcomers as valued members.
+                    A united and inclusive Canada where diverse communities thrive together in dignity, respect, and shared success.
                   </p>
                 </div>
               </div>
@@ -121,10 +118,7 @@ const About = () => {
                 <div>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Mission</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To empower refugees, immigrants, and vulnerable individuals to achieve self-sufficiency 
-                    and integration through comprehensive settlement support, education, employment guidance, 
-                    legal assistance, and community-building programs. We believe that with the right support, 
-                    every person can thrive and contribute meaningfully to society.
+                    To empower and support multicultural communities in Canada by promoting inclusion, cultural pride, equal opportunity, and meaningful community engagement.
                   </p>
                 </div>
               </div>
@@ -134,12 +128,13 @@ const About = () => {
                   <Goal className="w-7 h-7 text-accent" />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Goal</h2>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3"> Our Core Value</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To create lasting positive change in the lives of newcomers by providing holistic, 
-                    culturally-sensitive services that address their unique needs. We aim to help every 
-                    individual we serve achieve independence, build meaningful connections, and fully 
-                    participate in Canadian society.
+                    Inclusion – Welcoming and supporting people of all backgrounds
+Equity – Advocating for fair access to opportunities and services
+Collaboration – Working with partners to strengthen community impact
+Youth Empowerment – Investing in education and leadership development
+Cultural Celebration – Honoring heritage while embracing Canadian unity
                   </p>
                 </div>
               </div>
@@ -149,12 +144,9 @@ const About = () => {
                   <Scroll className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Mandate</h2>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">Our Focus</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To provide holistic, culturally-sensitive services that address the unique needs of 
-                    newcomers to Canada. We advocate for policies that promote equity and inclusion, 
-                    partner with communities and organizations, and work tirelessly to ensure that every 
-                    person we serve receives the support they need to succeed.
+                    We work to strengthen community engagement, support newcomer settlement, promote education and youth development, encourage economic empowerment, and build cross-cultural understanding.
                   </p>
                 </div>
               </div>
@@ -277,5 +269,6 @@ const About = () => {
 };
 
 export default About;
+
 
 
