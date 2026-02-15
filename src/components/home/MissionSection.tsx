@@ -17,9 +17,7 @@ export function MissionSection() {
               Our Vision
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              A world where every newcomer—regardless of their origin—finds a welcoming community, 
-              access to essential services, and the opportunity to build a safe, dignified, and 
-              fulfilling life. We envision inclusive societies that embrace diversity as strength.
+             A united and inclusive Canada where diverse communities thrive together in dignity, respect, and shared success.
             </p>
           </div>
 
@@ -35,10 +33,7 @@ export function MissionSection() {
               Our Mission
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              To empower refugees, immigrants, and vulnerable individuals to achieve self-sufficiency 
-              and integration through comprehensive settlement support, education, employment guidance, 
-              legal assistance, and community-building programs. We believe everyone deserves the 
-              chance to thrive.
+              To empower and support multicultural communities in Canada by promoting inclusion, cultural pride, equal opportunity, and meaningful community engagement.
             </p>
           </div>
 
@@ -51,12 +46,14 @@ export function MissionSection() {
               <Scroll className="w-8 h-8 text-accent" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-              Our Mandate
+             Our Core Values
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              To provide holistic, culturally-sensitive services that address the unique needs of 
-              newcomers. We advocate for policies that promote equity and inclusion, and partner 
-              with communities to create lasting positive change in the lives of those we serve.
+             Inclusion – Welcoming and supporting people of all backgrounds
+Equity – Advocating for fair access to opportunities and services
+Collaboration – Working with partners to strengthen community impact
+Youth Empowerment – Investing in education and leadership development
+Cultural Celebration – Honoring heritage while embracing Canadian unity
             </p>
           </div>
         </div>
@@ -64,3 +61,4 @@ export function MissionSection() {
     </section>
   );
 }
+
