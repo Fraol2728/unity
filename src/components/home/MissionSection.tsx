@@ -46,14 +46,10 @@ export function MissionSection() {
               <Scroll className="w-8 h-8 text-accent" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-             Our Core Values
+             Our Focus
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-             Inclusion – Welcoming and supporting people of all backgrounds
-Equity – Advocating for fair access to opportunities and services
-Collaboration – Working with partners to strengthen community impact
-Youth Empowerment – Investing in education and leadership development
-Cultural Celebration – Honoring heritage while embracing Canadian unity
+            We work to strengthen community engagement, support newcomer settlement, promote education and youth development, encourage economic empowerment, and build cross-cultural understanding.
             </p>
           </div>
         </div>
@@ -61,4 +57,5 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
     </section>
   );
 }
+
 
