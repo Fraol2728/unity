@@ -2,9 +2,9 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Unity Settlement helped my family find not just a home, but a community. After fleeing our country, we thought we had lost everything. They showed us that hope and kindness still exist.",
-    name: "Amara K.",
-    role: "Refugee from Syria",
+    quote: "Unity Welcome Settlement helped my family find not just a home, but a community. After fleeing our country, we thought we had lost everything. They showed us that hope and kindness still exist.",
+    name: "Mikiyas G.",
+    role: "Refugee from Ethiopia",
     // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
   },
   {
@@ -70,5 +70,6 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
 
 
