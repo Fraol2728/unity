@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -34,8 +34,11 @@ const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, href: "#" },
 ];
 
+const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL || "http://localhost:5000/api/contact";
+
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -44,32 +47,37 @@ const Contact = () => {
     message: "",
   });
 
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const res = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch(CONTACT_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    if (!res.ok) throw new Error("Failed");
+      if (!res.ok) {
+        throw new Error("Failed");
+      }
 
-    toast({
-      title: "Message Sent!",
-      description: "Your message was sent successfully.",
-    });
+      toast({
+        title: "Message Sent!",
+        description: "Your message was sent successfully.",
+      });
 
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-  } catch {
-    toast({
-      title: "Error",
-      description: "Failed to send message.",
-      variant: "destructive",
-    });
-  }
-};
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      toast({
+        title: "Error",
+        description: "Failed to send message.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -194,8 +202,8 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full sm:w-auto">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4 ml-2" />
                   </Button>
                 </form>
