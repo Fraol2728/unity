@@ -1,18 +1,50 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-community.jpg";
+import communityVolunteersImage from "@/assets/2.jpg";
+import settlementSupportImage from "@/assets/team-photo.jpg";
+
+const heroSlides = [
+  {
+    src: heroImage,
+    alt: "Diverse community members coming together in unity",
+  },
+  {
+    src: communityVolunteersImage,
+    alt: "Multicultural community volunteers supporting newcomer families",
+  },
+  {
+    src: settlementSupportImage,
+    alt: "Newcomer families receiving settlement support and guidance",
+  },
+];
 
 export function HeroSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length);
+    }, 4500);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Slider */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Diverse community members coming together in unity"
-          className="w-full h-full object-cover"
-        />
+        {heroSlides.map((slide, index) => (
+          <img
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              activeSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
       </div>
 
@@ -32,13 +64,24 @@ export function HeroSection() {
             <strong className="text-secondary">Our vision:</strong>  is a united and inclusive Canada where diverse communities thrive together with dignity and respect
           </p>
           <div className="flex flex-wrap gap-4">
-           
+
             <Button variant="hero-outline" size="xl" asChild>
               <Link to="/about">Learn About Us</Link>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
+          </div>
+
+          <div className="mt-8 flex gap-2" aria-hidden="true">
+            {heroSlides.map((slide, index) => (
+              <span
+                key={slide.alt}
+                className={`h-1.5 w-8 rounded-full transition-colors ${
+                  activeSlide === index ? "bg-secondary" : "bg-primary-foreground/40"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
