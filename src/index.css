@@ -22,16 +22,16 @@
     --primary: 158 35% 28%;
     --primary-foreground: 45 30% 97%;
 
-    /* Warm amber secondary - welcoming */
-    --secondary: 38 85% 55%;
+    /* Bright cyan secondary */
+    --secondary: 185.4 83.9% 43.9%;
     --secondary-foreground: 30 15% 15%;
 
     /* Muted warm tones */
     --muted: 40 25% 92%;
     --muted-foreground: 30 10% 45%;
 
-    /* Terracotta accent */
-    --accent: 16 65% 55%;
+    /* Cyan accent */
+    --accent: 185.4 83.9% 43.9%;
     --accent-foreground: 45 30% 97%;
 
     /* Destructive */
@@ -45,8 +45,8 @@
 
     /* Chart colors */
     --chart-1: 158 35% 28%;
-    --chart-2: 38 85% 55%;
-    --chart-3: 16 65% 55%;
+    --chart-2: 185.4 83.9% 43.9%;
+    --chart-3: 185.4 83.9% 43.9%;
     --chart-4: 200 60% 45%;
     --chart-5: 280 50% 50%;
 
@@ -62,9 +62,9 @@
 
     /* Custom tokens */
     --hero-gradient: linear-gradient(135deg, hsl(158 35% 28%) 0%, hsl(158 40% 22%) 100%);
-    --warm-gradient: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(28 80% 50%) 100%);
+    --warm-gradient: linear-gradient(135deg, hsl(185.4 83.9% 43.9%) 0%, hsl(185.4 83.9% 43.9%) 100%);
     --section-alt: 45 35% 95%;
-    --gold: 43 90% 55%;
+    --gold: 185.4 83.9% 43.9%;
     --gold-foreground: 30 15% 15%;
 
     --radius: 0.75rem;
@@ -83,13 +83,13 @@
     --primary: 158 45% 45%;
     --primary-foreground: 30 15% 10%;
 
-    --secondary: 38 75% 50%;
+    --secondary: 185.4 83.9% 43.9%;
     --secondary-foreground: 30 15% 10%;
 
     --muted: 30 10% 20%;
     --muted-foreground: 40 15% 65%;
 
-    --accent: 16 55% 50%;
+    --accent: 185.4 83.9% 43.9%;
     --accent-foreground: 30 15% 10%;
 
     --destructive: 0 62% 50%;
