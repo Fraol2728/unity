@@ -18,7 +18,7 @@ npm run dev
 - `JWT_SECRET`: JWT signing secret
 - `ADMIN_USERNAME`: Admin username
 - `ADMIN_PASSWORD_HASH`: Bcrypt hash for admin password
-- `CLIENT_ORIGIN`: Comma-separated allowed frontend origins for CORS (example: `https://uwsettle.org,http://localhost:5173`)
+- `CLIENT_ORIGIN`: Comma-separated allowed frontend origins for CORS (example: `https://uwsettle.org,http://localhost:8080,http://localhost:5173`)
 
 ## API Endpoints
 
