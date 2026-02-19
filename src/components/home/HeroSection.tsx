@@ -51,8 +51,8 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative container-custom section-padding reveal-up">
         <div className="max-w-3xl animate-ready slide-up">
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-6 animate-ready fade-in animation-delay-100">
-           Unity Welcome Settlement
+          <span className="inline-block px-5 py-2.5 rounded-full bg-secondary text-secondary-foreground font-bold text-base sm:text-lg shadow-lg mb-6 animate-ready fade-in animation-delay-100">
+            Unity Welcome Settlement
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-ready slide-up animation-delay-200">
            Helping Newcomers & Multicultural Communities Thrive in Canada
@@ -91,7 +91,6 @@ export function HeroSection() {
     </section>
   );
 }
-
 
 
 
