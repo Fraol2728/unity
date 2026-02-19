@@ -152,12 +152,41 @@
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
 
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01];
+  }
+
+  .hover-soft-shadow {
+    @apply transition-shadow duration-300 ease-out hover:shadow-xl;
+  }
+
+  .hover-color {
+    @apply transition-colors duration-300 ease-out;
+  }
+
   .link-underline {
     @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }
 
 @layer utilities {
+  .animate-ready {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .fade-in {
+    animation: fadeIn 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .scale-in {
+    animation: scaleInSoft 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
@@ -201,6 +230,28 @@
     }
   }
 
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes scaleInSoft {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .animation-delay-100 {
     animation-delay: 100ms;
   }
@@ -215,5 +266,28 @@
 
   .animation-delay-400 {
     animation-delay: 400ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ready,
+    .fade-in,
+    .slide-up,
+    .scale-in,
+    .animate-fade-up,
+    .animate-fade-in,
+    .animate-scale-in {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .card-hover,
+    .hover-lift,
+    .hover-soft-shadow,
+    .hover-color,
+    .link-underline {
+      transition-duration: 0ms !important;
+      transform: none !important;
+    }
   }
 }

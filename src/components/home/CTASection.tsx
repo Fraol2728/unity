@@ -6,27 +6,27 @@ export function CTASection() {
   return (
     <section className="section-padding">
       <div className="container-custom">
-        <div className="relative rounded-3xl bg-warm-gradient overflow-hidden">
+        <div className="relative rounded-3xl bg-warm-gradient overflow-hidden animate-ready scale-in hover-soft-shadow">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
           <div className="relative px-8 py-16 md:px-16 md:py-20 text-center">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-secondary-foreground mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-secondary-foreground mb-6 animate-ready slide-up animation-delay-100">
               Join Us in Making a Difference
             </h2>
-            <p className="text-lg text-secondary-foreground/80 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-secondary-foreground/80 max-w-2xl mx-auto mb-8 animate-ready fade-in animation-delay-200">
               Whether you want to donate, volunteer, or simply learn more about our work, 
               there are many ways to support our mission and help transform lives.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="xl" asChild>
+              <Button size="xl" className="hover-lift hover-soft-shadow" asChild>
                 <Link to="/contact">
                   Get Involved
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-foreground/30 hover:bg-foreground/10" asChild>
+              <Button variant="outline" size="xl" className="border-foreground/30 hover:bg-foreground/10 hover-lift hover-soft-shadow" asChild>
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

@@ -35,18 +35,18 @@ export function ServicesSection() {
     <section className="section-padding">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
-          <div className="max-w-2xl">
-            <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
+          <div className="max-w-2xl animate-ready slide-up">
+            <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4 animate-ready fade-in animation-delay-100">
               How We Help
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4 animate-ready slide-up animation-delay-200">
               Comprehensive Support Services
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground animate-ready fade-in animation-delay-300">
               From your first day to lasting success, we provide the resources and guidance you need at every step.
             </p>
           </div>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" className="hover-lift hover-soft-shadow" asChild>
             <Link to="/services">
               View All Services
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -59,7 +59,7 @@ export function ServicesSection() {
             <Link
               key={service.title}
               to="/services"
-              className="group bg-card border border-border rounded-2xl p-8 card-hover opacity-0 animate-fade-up"
+              className="group bg-card border border-border rounded-2xl p-8 card-hover hover-lift hover-soft-shadow animate-ready slide-up"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors">

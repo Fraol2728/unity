@@ -25,14 +25,14 @@ export function TestimonialsSection() {
   return (
     <section className="section-padding bg-primary">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-secondary font-medium text-sm mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-ready slide-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-secondary font-medium text-sm mb-4 animate-ready fade-in animation-delay-100">
             Success Stories
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mb-6 animate-ready slide-up animation-delay-200">
             Voices from Our Community
           </h2>
-          <p className="text-lg text-primary-foreground/80">
+          <p className="text-lg text-primary-foreground/80 animate-ready fade-in animation-delay-300">
             Every story is a testament to resilience, courage, and the power of community support.
           </p>
         </div>
@@ -41,7 +41,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/10 opacity-0 animate-fade-up"
+              className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/10 card-hover hover-lift hover-soft-shadow animate-ready slide-up"
               style={{ animationDelay: `${index * 150}ms`, animationFillMode: "forwards" }}
             >
               <Quote className="w-10 h-10 text-secondary mb-6" />
