@@ -17,7 +17,7 @@ const emptyForm = {
 
 const AdminDashboard = () => {
   const queryClient = useQueryClient();
-  const [token, setToken] = useState(localStorage.getItem("adminToken") || "");
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [credentials, setCredentials] = useState({ username: "", password: "" });
   const [form, setForm] = useState(emptyForm);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -32,7 +32,6 @@ const AdminDashboard = () => {
   const loginMutation = useMutation({
     mutationFn: () => authApi.login(credentials.username, credentials.password),
     onSuccess: (data) => {
-      localStorage.setItem("adminToken", data.token);
       setToken(data.token);
       setMessage("Logged in successfully.");
     },
@@ -119,7 +118,7 @@ const AdminDashboard = () => {
                 <Button
                   variant="outline"
                   onClick={() => {
-                    localStorage.removeItem("adminToken");
+                    localStorage.removeItem("token");
                     setToken("");
                     resetForm();
                   }}
