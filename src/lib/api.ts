@@ -19,6 +19,16 @@ const resolveApiBase = () => {
 
 const API_BASE = resolveApiBase();
 
+const requestJson = async (input: RequestInfo | URL, init?: RequestInit) => {
+  try {
+    return await fetch(input, init);
+  } catch {
+    throw new Error(
+      "Unable to reach the API. Check that the backend is running and CORS/API URL settings are correct.",
+    );
+  }
+};
+
 const parseJsonResponse = async <T>(response: Response): Promise<T> => {
   const contentType = response.headers.get("content-type") || "";
   const isJsonResponse = contentType.includes("application/json");
@@ -33,35 +43,15 @@ const parseJsonResponse = async <T>(response: Response): Promise<T> => {
 
 export const blogApi = {
   getPublishedBlogs: async () => {
-    const response = await fetch(`${API_BASE}/blogs`);
-    const data = await parseJsonResponse<Blog[] | { blogs?: Blog[] }>(response);
-
-    if (Array.isArray(data)) {
-      return data;
-    }
-
-    if (Array.isArray(data.blogs)) {
-      return data.blogs;
-    }
-
-    return [];
+    const response = await requestJson(`${API_BASE}/blogs`);
+    return parseJsonResponse<Blog[]>(response);
   },
   getBlogBySlug: async (slug: string) => {
-    const response = await fetch(`${API_BASE}/blogs/${slug}`);
-    const data = await parseJsonResponse<Blog | { blog?: Blog }>(response);
-
-    if ("title" in data && "content" in data) {
-      return data;
-    }
-
-    if (data.blog) {
-      return data.blog;
-    }
-
-    throw new Error("Blog not found");
+    const response = await requestJson(`${API_BASE}/blogs/${slug}`);
+    return parseJsonResponse<Blog>(response);
   },
   getAdminBlogs: async (token: string) => {
-    const response = await fetch(`${API_BASE}/blogs/admin/all`, {
+    const response = await requestJson(`${API_BASE}/blogs/admin/all`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -70,7 +60,7 @@ export const blogApi = {
     return parseJsonResponse<Blog[]>(response);
   },
   createBlog: async (payload: Partial<Blog>, token: string) => {
-    const response = await fetch(`${API_BASE}/blogs`, {
+    const response = await requestJson(`${API_BASE}/blogs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +72,7 @@ export const blogApi = {
     return parseJsonResponse<Blog>(response);
   },
   updateBlog: async (id: string, payload: Partial<Blog>, token: string) => {
-    const response = await fetch(`${API_BASE}/blogs/${id}`, {
+    const response = await requestJson(`${API_BASE}/blogs/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -94,7 +84,7 @@ export const blogApi = {
     return parseJsonResponse<Blog>(response);
   },
   deleteBlog: async (id: string, token: string) => {
-    const response = await fetch(`${API_BASE}/blogs/${id}`, {
+    const response = await requestJson(`${API_BASE}/blogs/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -107,7 +97,7 @@ export const blogApi = {
 
 export const authApi = {
   login: async (username: string, password: string): Promise<AdminLoginResponse> => {
-    const response = await fetch(`${API_BASE}/auth/login`, {
+    const response = await requestJson(`${API_BASE}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
