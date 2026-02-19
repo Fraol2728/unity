@@ -170,33 +170,75 @@
 }
 
 @layer utilities {
+  .reveal-left,
+  .reveal-right,
+  .reveal-up,
   .animate-ready {
     opacity: 0;
     will-change: transform, opacity;
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .fade-in {
+  .reveal-left {
+    transform: translate3d(-24px, 0, 0);
+  }
+
+  .reveal-right {
+    transform: translate3d(24px, 0, 0);
+  }
+
+  .reveal-up,
+  .animate-ready {
+    transform: translate3d(0, 24px, 0);
+  }
+
+  .reveal-left.active,
+  .reveal-right.active,
+  .reveal-up.active,
+  .animate-ready.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .fade-in,
+  .animate-fade-in {
     animation: fadeIn 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  .slide-up {
+  .slide-up,
+  .animate-fade-up {
     animation: slideUp 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  .scale-in {
+  .scale-in,
+  .animate-scale-in {
     animation: scaleInSoft 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+  .animate-ready.fade-in,
+  .animate-ready.slide-up,
+  .animate-ready.scale-in,
+  .animate-ready.animate-fade-up,
+  .animate-ready.animate-fade-in,
+  .animate-ready.animate-scale-in {
+    animation: none;
   }
 
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+  .animate-ready.active.fade-in,
+  .animate-ready.active.animate-fade-in {
+    animation: fadeIn 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  .animate-scale-in {
-    animation: scaleIn 0.4s ease-out forwards;
+  .animate-ready.active.slide-up,
+  .animate-ready.active.animate-fade-up {
+    animation: slideUp 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-ready.active.scale-in,
+  .animate-ready.active.animate-scale-in {
+    animation: scaleInSoft 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   @keyframes fadeUp {
@@ -253,22 +295,29 @@
   }
 
   .animation-delay-100 {
+    transition-delay: 100ms;
     animation-delay: 100ms;
   }
 
   .animation-delay-200 {
+    transition-delay: 200ms;
     animation-delay: 200ms;
   }
 
   .animation-delay-300 {
+    transition-delay: 300ms;
     animation-delay: 300ms;
   }
 
   .animation-delay-400 {
+    transition-delay: 400ms;
     animation-delay: 400ms;
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .reveal-left,
+    .reveal-right,
+    .reveal-up,
     .animate-ready,
     .fade-in,
     .slide-up,

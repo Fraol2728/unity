@@ -88,9 +88,9 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center reveal-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
               Our Services
             </span>
@@ -106,7 +106,7 @@ const Services = () => {
       </section>
 
       {/* Services List */}
-      <section className="section-padding">
+      <section className="section-padding reveal-up">
         <div className="container-custom">
           <div className="space-y-12">
             {services.map((service, index) => (
@@ -117,7 +117,7 @@ const Services = () => {
               >
                 <div className="grid lg:grid-cols-5 gap-0">
                   {/* Left side - icon and title */}
-                  <div className="lg:col-span-2 bg-primary/5 p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="lg:col-span-2 bg-primary/5 p-8 lg:p-12 flex flex-col justify-center reveal-left">
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-primary" />
                     </div>
@@ -130,7 +130,7 @@ const Services = () => {
                   </div>
 
                   {/* Right side - details */}
-                  <div className="lg:col-span-3 p-8 lg:p-12">
+                  <div className="lg:col-span-3 p-8 lg:p-12 reveal-right">
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       {service.fullDesc}
                     </p>
@@ -158,7 +158,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary">
+      <section className="section-padding reveal-up bg-primary">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">

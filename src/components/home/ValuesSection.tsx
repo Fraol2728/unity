@@ -35,7 +35,7 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="section-padding bg-section-alt">
+    <section className="section-padding reveal-up bg-section-alt">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-ready slide-up">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4 animate-ready fade-in animation-delay-100">

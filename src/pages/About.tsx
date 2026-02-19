@@ -62,9 +62,9 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center reveal-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
               About Us
             </span>
@@ -80,7 +80,7 @@ const About = () => {
       </section>
 
       {/* Welcome Message */}
-      <section className="section-padding bg-primary">
+      <section className="section-padding reveal-up bg-primary">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <Quote className="w-12 h-12 text-secondary mx-auto mb-6 opacity-60" />
@@ -95,10 +95,10 @@ const About = () => {
       </section>
 
       {/* Vision, Mission, Goal, Mandate */}
-      <section className="section-padding">
+      <section className="section-padding reveal-up">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8">
+            <div className="space-y-8 reveal-left">
               <div className="flex gap-4 opacity-0 animate-fade-up" style={{ animationFillMode: "forwards" }}>
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Eye className="w-7 h-7 text-primary" />
@@ -152,7 +152,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative reveal-right">
               { <img
                 src={teamPhoto}
                 alt="Unity Settlement team members working together"
@@ -168,7 +168,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
@@ -201,7 +201,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
       </section>
 
       {/* Board Members */}
-      <section className="section-padding">
+      <section className="section-padding reveal-up">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-4">
@@ -240,7 +240,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
           <div className="bg-primary rounded-3xl px-8 py-16 md:px-16 text-center">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">

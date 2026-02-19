@@ -2,7 +2,7 @@ import { Target, Eye, Scroll } from "lucide-react";
 
 export function MissionSection() {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding reveal-up bg-background">
       <div className="container-custom">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Vision */}

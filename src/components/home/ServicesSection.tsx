@@ -32,7 +32,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding reveal-up">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div className="max-w-2xl animate-ready slide-up">

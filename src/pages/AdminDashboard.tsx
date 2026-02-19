@@ -83,7 +83,7 @@ const AdminDashboard = () => {
 
   return (
     <Layout>
-      <section className="section-padding">
+      <section className="section-padding reveal-up">
         <div className="container-custom max-w-5xl space-y-8">
           <h1 className="font-display text-3xl font-bold">Admin Dashboard</h1>
           {message && <p className="text-sm text-primary">{message}</p>}
