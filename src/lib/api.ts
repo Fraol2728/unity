@@ -87,23 +87,17 @@ export const blogApi = {
 
 export const authApi = {
   login: async (username: string, password: string): Promise<AdminLoginResponse> => {
-    try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+    const response = await fetch(`${API_BASE}/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
 
-      const data = await parseJsonResponse<AdminLoginResponse>(response);
-      localStorage.setItem("token", data.token);
+    const data = await parseJsonResponse<AdminLoginResponse>(response);
+    localStorage.setItem("token", data.token);
 
-      return data;
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "Login failed";
-      alert(message);
-      throw error;
-    }
+    return data;
   },
 };

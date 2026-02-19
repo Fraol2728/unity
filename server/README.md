@@ -7,6 +7,8 @@ cd server
 npm install
 cp .env.example .env
 npm run dev
+# production
+# npm start
 ```
 
 ## Environment Variables
@@ -16,7 +18,7 @@ npm run dev
 - `JWT_SECRET`: JWT signing secret
 - `ADMIN_USERNAME`: Admin username
 - `ADMIN_PASSWORD_HASH`: Bcrypt hash for admin password
-- `CLIENT_ORIGIN`: Frontend origin for CORS
+- `CLIENT_ORIGIN`: Comma-separated allowed frontend origins for CORS (example: `https://uwsettle.org,http://localhost:5173`)
 
 ## API Endpoints
 
