@@ -6,7 +6,7 @@ export function BoardAnnouncementSection() {
   return (
     <section className="section-padding">
       <div className="container-custom">
-        <div className="bg-warm-gradient rounded-3xl px-8 py-12 md:px-16 md:py-16">
+        <div className="bg-warm-gradient rounded-3xl px-8 py-12 md:px-16 md:py-16 animate-ready slide-up hover-soft-shadow">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="w-20 h-20 rounded-full bg-background/20 flex items-center justify-center flex-shrink-0">
               <Users className="w-10 h-10 text-foreground" />
@@ -28,7 +28,7 @@ export function BoardAnnouncementSection() {
               </p>
             </div>
 
-            <Button variant="outline" size="lg" className="border-foreground/30 hover:bg-foreground/10" asChild>
+            <Button variant="outline" size="lg" className="border-foreground/30 hover:bg-foreground/10 hover-lift hover-soft-shadow" asChild>
               <Link to="/about">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />

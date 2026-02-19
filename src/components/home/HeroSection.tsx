@@ -50,25 +50,25 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative container-custom section-padding">
-        <div className="max-w-3xl animate-fade-up">
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-6">
+        <div className="max-w-3xl animate-ready slide-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-6 animate-ready fade-in animation-delay-100">
            Unity Welcome Settlement
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-ready slide-up animation-delay-200">
            Helping Newcomers & Multicultural Communities Thrive in Canada
           </h1>
           {/* <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-4">
             We walk alongside refugees, immigrants, and diverse communities — offering the support, resources, and connections you need to feel at home and build a brighter future
           </p> */}
-          <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed mb-8 animate-ready fade-in animation-delay-300">
             <strong className="text-secondary">Our vision:</strong>  is a united and inclusive Canada where diverse communities thrive together with dignity and respect
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 animate-ready scale-in animation-delay-400">
 
-            <Button variant="hero-outline" size="xl" asChild>
+            <Button variant="hero-outline" size="xl" className="hover-lift hover-soft-shadow" asChild>
               <Link to="/about">Learn About Us</Link>
             </Button>
-            <Button variant="hero-outline" size="xl" asChild>
+            <Button variant="hero-outline" size="xl" className="hover-lift hover-soft-shadow" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

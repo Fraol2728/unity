@@ -7,7 +7,7 @@ export function MissionSection() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Vision */}
           <div
-            className="bg-card rounded-2xl p-8 border border-border card-hover opacity-0 animate-fade-up"
+            className="bg-card rounded-2xl p-8 border border-border card-hover hover-lift hover-soft-shadow animate-ready slide-up"
             style={{ animationDelay: "0ms", animationFillMode: "forwards" }}
           >
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
@@ -23,7 +23,7 @@ export function MissionSection() {
 
           {/* Mission */}
           <div
-            className="bg-card rounded-2xl p-8 border border-border card-hover opacity-0 animate-fade-up"
+            className="bg-card rounded-2xl p-8 border border-border card-hover hover-lift hover-soft-shadow animate-ready slide-up"
             style={{ animationDelay: "100ms", animationFillMode: "forwards" }}
           >
             <div className="w-16 h-16 rounded-2xl bg-secondary/20 flex items-center justify-center mb-6">
@@ -39,7 +39,7 @@ export function MissionSection() {
 
           {/* Mandate */}
           <div
-            className="bg-card rounded-2xl p-8 border border-border card-hover opacity-0 animate-fade-up"
+            className="bg-card rounded-2xl p-8 border border-border card-hover hover-lift hover-soft-shadow animate-ready slide-up"
             style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
           >
             <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mb-6">

@@ -37,14 +37,14 @@ export function ValuesSection() {
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-ready slide-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4 animate-ready fade-in animation-delay-100">
             Our Core Values
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6 animate-ready slide-up animation-delay-200">
             Principles That Guide Everything We Do
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed animate-ready fade-in animation-delay-300">
             Our values shape our approach to serving newcomers and building an inclusive, 
             compassionate community where everyone can thrive.
           </p>
@@ -54,7 +54,7 @@ export function ValuesSection() {
           {values.map((value, index) => (
             <div
               key={value.title}
-              className="bg-card rounded-2xl p-8 text-center card-hover opacity-0 animate-fade-up border border-border"
+              className="bg-card rounded-2xl p-8 text-center card-hover hover-lift hover-soft-shadow animate-ready slide-up border border-border"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
             >
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
