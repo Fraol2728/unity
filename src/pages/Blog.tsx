@@ -11,6 +11,21 @@ const Blog = () => {
     queryFn: blogApi.getPublishedBlogs,
   });
 
+  const getExcerpt = (content?: string) => {
+    if (!content) return "No preview available.";
+
+    return `${content.replace(/<[^>]+>/g, "").slice(0, 120)}...`;
+  };
+
+  const getFormattedDate = (date?: string) => {
+    if (!date) return "Date unavailable";
+
+    const parsedDate = new Date(date);
+    return Number.isNaN(parsedDate.getTime())
+      ? "Date unavailable"
+      : parsedDate.toLocaleDateString();
+  };
+
   return (
     <Layout>
       <section className="section-padding bg-section-alt">
@@ -39,7 +54,7 @@ const Blog = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
                 <article
-                  key={post._id}
+                  key={post._id || post.slug || `blog-${index}`}
                   className="group bg-card border border-border rounded-2xl overflow-hidden card-hover opacity-0 animate-fade-up"
                   style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
                 >
@@ -55,7 +70,7 @@ const Blog = () => {
                       {post.title}
                     </h2>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
-                      {post.content.replace(/<[^>]+>/g, "").slice(0, 120)}...
+                      {getExcerpt(post.content)}
                     </p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
                       <div className="flex items-center gap-1">
@@ -64,7 +79,7 @@ const Blog = () => {
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
-                        {new Date(post.createdAt).toLocaleDateString()}
+                        {getFormattedDate(post.createdAt)}
                       </div>
                     </div>
                     <Button asChild variant="ghost" size="sm" className="p-0 h-auto font-medium text-primary hover:bg-transparent">
