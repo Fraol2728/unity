@@ -34,11 +34,31 @@ const parseJsonResponse = async <T>(response: Response): Promise<T> => {
 export const blogApi = {
   getPublishedBlogs: async () => {
     const response = await fetch(`${API_BASE}/blogs`);
-    return parseJsonResponse<Blog[]>(response);
+    const data = await parseJsonResponse<Blog[] | { blogs?: Blog[] }>(response);
+
+    if (Array.isArray(data)) {
+      return data;
+    }
+
+    if (Array.isArray(data.blogs)) {
+      return data.blogs;
+    }
+
+    return [];
   },
   getBlogBySlug: async (slug: string) => {
     const response = await fetch(`${API_BASE}/blogs/${slug}`);
-    return parseJsonResponse<Blog>(response);
+    const data = await parseJsonResponse<Blog | { blog?: Blog }>(response);
+
+    if ("title" in data && "content" in data) {
+      return data;
+    }
+
+    if (data.blog) {
+      return data.blog;
+    }
+
+    throw new Error("Blog not found");
   },
   getAdminBlogs: async (token: string) => {
     const response = await fetch(`${API_BASE}/blogs/admin/all`, {
