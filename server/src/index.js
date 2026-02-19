@@ -10,13 +10,28 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+const allowedOrigins = (process.env.CLIENT_ORIGIN || "https://uwsettle.org")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN || "*",
-  })
-);
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+      return;
+    }
+
+    callback(new Error("Not allowed by CORS"));
+  },
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204,
+};
+
 app.use(express.json({ limit: "2mb" }));
+app.use("/api", cors(corsOptions));
+app.options(/^\/api\/.*/, cors(corsOptions));
 
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok" });
