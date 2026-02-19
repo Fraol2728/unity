@@ -1,23 +1,28 @@
 import type { AdminLoginResponse, Blog } from "@/types/blog";
 
 const resolveApiBase = () => {
-  if (import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL;
+  const configuredBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  if (configuredBaseUrl) {
+    return configuredBaseUrl;
   }
 
   if (typeof window === "undefined") {
     return "http://localhost:5000/api";
   }
 
-  return window.location.hostname === "localhost"
-    ? "http://localhost:5000/api"
-    : `${window.location.origin}/api`;
+  if (import.meta.env.DEV) {
+    return "http://localhost:5000/api";
+  }
+
+  return `${window.location.origin}/api`;
 };
 
 const API_BASE = resolveApiBase();
 
 const parseJsonResponse = async <T>(response: Response): Promise<T> => {
-  const data = await response.json().catch(() => ({}));
+  const contentType = response.headers.get("content-type") || "";
+  const isJsonResponse = contentType.includes("application/json");
+  const data = isJsonResponse ? await response.json().catch(() => ({})) : {};
 
   if (!response.ok) {
     throw new Error((data as { message?: string }).message || "Request failed");
