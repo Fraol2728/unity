@@ -114,9 +114,9 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center reveal-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
               Get In Touch
             </span>
@@ -132,11 +132,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="section-padding">
+      <section className="section-padding reveal-up">
         <div className="container-custom">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Form */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 reveal-left">
               <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
                 <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                   Send Us a Message
@@ -238,7 +238,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-6 reveal-right">
               {contactInfo.map((item) => (
                 <div
                   key={item.title}
@@ -283,7 +283,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="section-padding bg-section-alt">
+      <section className="section-padding reveal-up bg-section-alt">
         <div className="container-custom">
           <div className="text-center mb-8">
             <h2 className="font-display text-2xl font-bold text-foreground mb-2">

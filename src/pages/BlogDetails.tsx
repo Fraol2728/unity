@@ -15,8 +15,8 @@ const BlogDetails = () => {
 
   return (
     <Layout>
-      <section className="section-padding">
-        <div className="container-custom max-w-3xl">
+      <section className="section-padding reveal-up">
+        <div className="container-custom max-w-3xl reveal-up">
           {isLoading && <p className="text-muted-foreground">Loading blog...</p>}
           {error && <p className="text-destructive">Unable to find this blog post.</p>}
 

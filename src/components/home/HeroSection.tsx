@@ -49,7 +49,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative container-custom section-padding">
+      <div className="relative container-custom section-padding reveal-up">
         <div className="max-w-3xl animate-ready slide-up">
           <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-6 animate-ready fade-in animation-delay-100">
            Unity Welcome Settlement

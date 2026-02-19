@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function BoardAnnouncementSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding reveal-up">
       <div className="container-custom">
         <div className="bg-warm-gradient rounded-3xl px-8 py-12 md:px-16 md:py-16 animate-ready slide-up hover-soft-shadow">
           <div className="flex flex-col lg:flex-row items-center gap-8">

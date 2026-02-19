@@ -13,7 +13,7 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <section className="section-padding min-h-[60vh] flex items-center">
+      <section className="section-padding reveal-up min-h-[60vh] flex items-center">
         <div className="container-custom">
           <div className="max-w-xl mx-auto text-center">
             <div className="text-8xl font-display font-bold text-primary/20 mb-4">404</div>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding reveal-up">
       <div className="container-custom">
         <div className="relative rounded-3xl bg-warm-gradient overflow-hidden animate-ready scale-in hover-soft-shadow">
           {/* Decorative elements */}

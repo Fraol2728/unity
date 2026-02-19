@@ -23,7 +23,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="section-padding bg-primary">
+    <section className="section-padding reveal-up bg-primary">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-ready slide-up">
           <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-secondary font-medium text-sm mb-4 animate-ready fade-in animation-delay-100">
