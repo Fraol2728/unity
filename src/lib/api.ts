@@ -1,6 +1,20 @@
 import type { AdminLoginResponse, Blog } from "@/types/blog";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+const resolveApiBase = () => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+
+  if (typeof window === "undefined") {
+    return "http://localhost:5000/api";
+  }
+
+  return window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : `${window.location.origin}/api`;
+};
+
+const API_BASE = resolveApiBase();
 
 const parseJsonResponse = async <T>(response: Response): Promise<T> => {
   const data = await response.json().catch(() => ({}));
