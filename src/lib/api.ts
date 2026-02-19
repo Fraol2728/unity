@@ -44,11 +44,23 @@ const parseJsonResponse = async <T>(response: Response): Promise<T> => {
 export const blogApi = {
   getPublishedBlogs: async () => {
     const response = await requestJson(`${API_BASE}/blogs`);
-    return parseJsonResponse<Blog[]>(response);
+    const data = await parseJsonResponse<unknown>(response);
+
+    if (!Array.isArray(data)) {
+      throw new Error("Unexpected response while loading blog posts.");
+    }
+
+    return data as Blog[];
   },
   getBlogBySlug: async (slug: string) => {
     const response = await requestJson(`${API_BASE}/blogs/${slug}`);
-    return parseJsonResponse<Blog>(response);
+    const data = await parseJsonResponse<unknown>(response);
+
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      throw new Error("Unexpected response while loading the blog post.");
+    }
+
+    return data as Blog;
   },
   getAdminBlogs: async (token: string) => {
     const response = await requestJson(`${API_BASE}/blogs/admin/all`, {
