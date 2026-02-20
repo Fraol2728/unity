@@ -28,7 +28,7 @@ export function BoardAnnouncementSection() {
               className="bg-card rounded-2xl overflow-hidden border border-border card-hover opacity-0 animate-fade-up"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
             >
-              <img src={member.image} alt={member.name} className="w-full h-52 object-cover" />
+              <img src={member.image} alt={member.name} className="w-full aspect-square object-cover" />
               <div className="p-5 text-center">
                 <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
               </div>
