@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png"; // keep import at the top
@@ -14,10 +14,28 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#333032] border-[#333032]"
+          : "bg-white/10 border-white/20 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+      }`}
+    >
       <nav className="container-custom section-padding py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -30,10 +48,18 @@ export function Header() {
             />
 
             <div className="flex flex-col">
-              <span className="font-display text-lg font-bold text-primary leading-tight">
+              <span
+                className={`font-display text-lg font-bold leading-tight transition-colors ${
+                  isScrolled ? "text-white" : "text-primary"
+                }`}
+              >
                 Unity Welcome
               </span>
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span
+                className={`text-xs leading-tight transition-colors ${
+                  isScrolled ? "text-white/80" : "text-muted-foreground"
+                }`}
+              >
                 Settlement Agency
               </span>
             </div>
@@ -47,8 +73,12 @@ export function Header() {
                 to={item.href}
                 className={`text-sm font-medium transition-colors link-underline ${
                   location.pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? isScrolled
+                      ? "text-white"
+                      : "text-primary"
+                    : isScrolled
+                      ? "text-white/80 hover:text-white"
+                      : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.name}
@@ -70,9 +100,17 @@ export function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X
+                className={`h-6 w-6 ${
+                  isScrolled ? "text-white" : "text-foreground"
+                }`}
+              />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu
+                className={`h-6 w-6 ${
+                  isScrolled ? "text-white" : "text-foreground"
+                }`}
+              />
             )}
           </button>
         </div>
@@ -87,8 +125,12 @@ export function Header() {
                   to={item.href}
                   className={`text-base font-medium transition-colors ${
                     location.pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? isScrolled
+                        ? "text-white"
+                        : "text-primary"
+                      : isScrolled
+                        ? "text-white/80 hover:text-white"
+                        : "text-muted-foreground hover:text-foreground"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
