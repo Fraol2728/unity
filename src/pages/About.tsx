@@ -194,7 +194,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-56 object-cover"
+                  className="w-full aspect-square object-cover"
                 />
                 <div className="p-6">
                   <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
