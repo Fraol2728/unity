@@ -1,14 +1,10 @@
+import { useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Target, Eye, Scroll, Heart, Users, Handshake, Smile, Scale, Building2, Goal, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import teamPhoto from "@/assets/team-photo.jpg";
-import teamPhoto0 from "@/assets/1.jpg";
-import teamPhoto1 from "@/assets/2.jpg";
-import teamPhoto2 from "@/assets/3.jpg";
-import teamPhoto3 from "@/assets/4.jpg";
-import teamPhoto4 from "@/assets/5.jpg";
-import teamPhoto5 from "@/assets/6.jpg";
+import { boardMembers } from "@/data/boardMembers";
 
 const values = [
   { icon: Heart, title: "Inclusivity", description: "Embracing diversity and ensuring everyone feels welcomed, valued, and represented in our community." },
@@ -19,46 +15,17 @@ const values = [
   { icon: Building2, title: "Community Building", description: "Creating connections that transform strangers into neighbors and neighbors into family." },
 ];
 
-const boardMembers = [
-  {
-    name: "Adamu Nigussie",
-    // role: "Board Chair",
-    // bio: "Dr. Johnson brings 25 years of experience in humanitarian development and policy advocacy. Her vision guides our strategic direction.",
-    image: teamPhoto0,
-  },
-  {
-    name: "Fasil Workeneh",
-    // role: "Vice Chair",
-    // bio: "With expertise in community development and nonprofit management, Marcus ensures our programs align with our mission.",
-    image: teamPhoto1,
-  },
-  {
-    name: "Daraje Leiyu",
-    // role: "Secretary",
-    // bio: "A former refugee herself, Fatima brings invaluable lived experience and a deep understanding of newcomer challenges.",
-    image: teamPhoto2,
-  },
-  {
-    name: "Michael Benti",
-    // role: "Treasurer",
-    // bio: "David's financial expertise in the nonprofit sector ensures our resources are managed with integrity and transparency.",
-    image: teamPhoto3,
-  },
-  {
-    name: "Sammy Gebrael",
-    // role: "Board Member",
-    // bio: "Sofia specializes in education and skills development, helping shape our training and employment programs.",
-    image: teamPhoto4,
-  },
-  {
-    name: "Mesi Haileyesus",
-    // role: "Board Member",
-    // bio: "A mental health professional, Dr. Adeyemi oversees our wellness initiatives and trauma-informed care approaches.",
-    image: teamPhoto5,
-  },
-];
-
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const target = document.querySelector(location.hash);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.hash]);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -201,7 +168,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
       </section>
 
       {/* Board Members */}
-      <section className="section-padding reveal-up">
+      <section id="board-members" className="section-padding reveal-up scroll-mt-24">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-4">
@@ -227,7 +194,7 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full aspect-square object-cover"
+                  className="w-full h-56 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
@@ -269,6 +236,3 @@ Cultural Celebration – Honoring heritage while embracing Canadian unity
 };
 
 export default About;
-
-
-
