@@ -17,7 +17,7 @@ export function BoardAnnouncementSection() {
             Meet Our Board Members
           </h2>
           <p className="text-lg text-muted-foreground">
-            Here are the first three board members who guide our mission and support our community impact.
+            Here our board members who guide our mission and support our community impact.
           </p>
         </div>
 
