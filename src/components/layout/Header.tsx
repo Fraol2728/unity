@@ -30,10 +30,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl supports-[backdrop-filter]:backdrop-saturate-150 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#333032] border-[#333032]"
-          : "bg-white/10 border-white/20 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+          ? "bg-[#333032]/95 border-[#333032] shadow-[0_10px_30px_rgba(0,0,0,0.28)]"
+          : "bg-white/12 border-white/30 shadow-[0_10px_32px_rgba(15,23,42,0.16)]"
       }`}
     >
       <nav className="container-custom section-padding py-4">
