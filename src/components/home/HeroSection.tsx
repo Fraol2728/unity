@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero.jpg";
+import heroImage from "@/assets/hero-community.jpg";
 import communityVolunteersImage from "@/assets/Welcome-Refugees-Sign-at-Rally.webp";
 import settlementSupportImage from "@/assets/team-photo.jpg";
 
