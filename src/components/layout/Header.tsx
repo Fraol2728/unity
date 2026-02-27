@@ -89,7 +89,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="warm" size="lg" asChild>
-              <Link to="/contact">Donate Now</Link>
+              <Link to="https://donate.stripe.com/test_3cI4gz5ph7LN83d5Ob1ck00">Donate Now</Link>
             </Button>
           </div>
 
@@ -149,3 +149,4 @@ export function Header() {
     </header>
   );
 }
+
