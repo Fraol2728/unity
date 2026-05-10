@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import heroCommunityImage from "@/assets/hero-community.jpg";
 
-export function MissionSection() {
+function MissionSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -129,3 +129,5 @@ export function MissionSection() {
     </section>
   );
 }
+
+export { MissionSection };

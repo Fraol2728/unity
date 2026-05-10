@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero.jpg";
 import heroCommunityImage from "@/assets/hero-community.jpg";
 
-export default function HeroSection() {
+function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -191,3 +191,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+export { HeroSection };
