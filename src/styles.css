@@ -1,0 +1,265 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/*
+ * Unity Welcome Settlement Agency — design system.
+ * Warm humanitarian editorial palette. All colors in oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", ui-serif, Georgia, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-clay: var(--clay);
+  --color-clay-foreground: var(--clay-foreground);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --cream: oklch(0.964 0.011 95);
+  --cream-deep: oklch(0.933 0.017 92);
+  --background: oklch(0.964 0.011 95);
+  --foreground: oklch(0.213 0.012 165);
+
+  --card: oklch(0.988 0.005 95);
+  --card-foreground: oklch(0.213 0.012 165);
+  --popover: oklch(0.988 0.005 95);
+  --popover-foreground: oklch(0.213 0.012 165);
+
+  --primary: oklch(0.404 0.065 165);
+  --primary-foreground: oklch(0.985 0.006 95);
+  --secondary: oklch(0.933 0.017 92);
+  --secondary-foreground: oklch(0.286 0.032 165);
+  --sage: oklch(0.545 0.055 160);
+
+  --muted: oklch(0.933 0.017 92);
+  --muted-foreground: oklch(0.475 0.017 160);
+
+  --accent: oklch(0.673 0.126 40);
+  --accent-foreground: oklch(0.985 0.006 95);
+  --clay: oklch(0.673 0.126 40);
+  --clay-foreground: oklch(0.985 0.006 95);
+  --gold: oklch(0.775 0.104 88);
+
+  --ink: oklch(0.229 0.021 165);
+  --ink-foreground: oklch(0.955 0.011 95);
+
+  --destructive: oklch(0.55 0.19 27);
+  --destructive-foreground: oklch(0.985 0.006 95);
+
+  --border: oklch(0.878 0.014 92);
+  --input: oklch(0.878 0.014 92);
+  --ring: oklch(0.404 0.065 165);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-clay);
+    color: var(--color-clay-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 88rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-inline: 4rem;
+  }
+}
+
+/* Editorial display type ------------------------------------------------ */
+
+@utility display-xl {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  font-size: clamp(2.75rem, 8.5vw, 7.5rem);
+  text-transform: uppercase;
+}
+
+@utility display-lg {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+  font-size: clamp(2.25rem, 5.6vw, 4.75rem);
+  text-transform: uppercase;
+}
+
+@utility display-serif {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
+  font-size: clamp(2rem, 4.6vw, 3.9rem);
+}
+
+@utility heading-md {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+@utility label-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility body-lead {
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--color-muted-foreground);
+}
+
+@utility numeral {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Surfaces & shapes ------------------------------------------------------ */
+
+@utility surface-ink {
+  background-color: var(--color-ink);
+  color: var(--color-ink-foreground);
+}
+
+@utility rule-line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-border);
+}
+
+@utility mask-arch {
+  border-radius: 999px 999px 0.5rem 0.5rem;
+  overflow: hidden;
+}
+
+@utility mask-leaf {
+  border-radius: 12rem 0.5rem 12rem 0.5rem;
+  overflow: hidden;
+}
+
+@utility scene-3d {
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
+}
+
+@utility link-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover::after,
+  &[data-status="active"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
