@@ -86,7 +86,7 @@ function Hero() {
             <SectionLabel>{org.name}</SectionLabel>
           </motion.div>
 
-          <h1 className="display-xl mt-7 text-ink">
+          <h1 className="display-xl mt-6 text-ink">
             <RevealLines lines={["New beginnings", "start with"]} delay={0.1} />
             <span className="block overflow-hidden">
               <motion.span
